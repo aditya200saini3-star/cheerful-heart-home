@@ -157,7 +157,7 @@ const Index = () => {
 
         {/* CTA */}
         <section className="py-24 md:py-32 px-6 md:px-8 text-center max-w-4xl mx-auto">
-          <div className="bg-surface-container-highest/30 backdrop-blur-2xl rounded-md p-10 md:p-16 border border-border/30 shadow-2xl relative overflow-hidden">
+          <div className="glass-strong rounded-md p-10 md:p-16 relative overflow-hidden">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px]" aria-hidden />
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]" aria-hidden />
             <div className="relative z-10">
