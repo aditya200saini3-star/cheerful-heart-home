@@ -48,14 +48,6 @@ const Index = () => {
             </div>
           </div>
 
-          <div
-            className="pointer-events-none absolute bottom-0 left-0 right-0 h-[420px] z-20"
-            style={{
-              backgroundImage:
-                "linear-gradient(to top, hsl(var(--background)) 0%, hsl(var(--background) / 0.95) 18%, hsl(var(--background) / 0.78) 36%, hsl(var(--background) / 0.55) 54%, hsl(var(--background) / 0.32) 72%, hsl(var(--background) / 0.14) 86%, transparent 100%)",
-            }}
-            aria-hidden
-          />
         </section>
 
         {/* How It Works */}
