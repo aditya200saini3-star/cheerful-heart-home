@@ -2,95 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* QuizMaster Design System — dark, violet/cyan, Plus Jakarta Sans
+   All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Surfaces */
+    --background: 224 49% 10%;          /* #0b1326 */
+    --foreground: 224 89% 92%;          /* #dae2fd */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --surface: 224 49% 10%;
+    --surface-dim: 224 49% 10%;
+    --surface-bright: 224 22% 24%;      /* #31394d */
+    --surface-container-lowest: 224 73% 8%;  /* #060e20 */
+    --surface-container-low: 224 38% 13%;    /* #131b2e */
+    --surface-container: 224 33% 14%;        /* #171f33 */
+    --surface-container-high: 224 28% 19%;   /* #222a3d */
+    --surface-container-highest: 224 22% 24%;/* #2d3449 */
+    --surface-variant: 224 22% 23%;          /* #2d3449 */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 224 38% 13%;
+    --card-foreground: 224 89% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 224 33% 14%;
+    --popover-foreground: 224 89% 92%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Brand */
+    --primary: 263 100% 87%;            /* #d0bcff */
+    --primary-foreground: 263 100% 28%; /* #3c0091 */
+    --primary-container: 261 100% 74%;  /* #a078ff */
+    --on-primary-container: 263 100% 25%;/* #340080 */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 188 92% 63%;           /* #4cd7f6 */
+    --secondary-foreground: 190 100% 13%;/* #00424e */
+    --secondary-container: 188 97% 42%; /* #03b5d3 */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --tertiary: 222 39% 80%;            /* #b9c7e0 */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --muted: 224 33% 14%;
+    --muted-foreground: 268 13% 81%;    /* #cbc3d7 / on-surface-variant */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --accent: 188 92% 63%;
+    --accent-foreground: 190 100% 13%;
 
-    --radius: 0.5rem;
+    --destructive: 6 100% 84%;          /* #ffb4ab */
+    --destructive-foreground: 358 100% 22%;
 
-    --sidebar-background: 0 0% 98%;
+    --border: 268 12% 31%;              /* #494454 / outline-variant */
+    --input: 224 22% 24%;
+    --ring: 263 100% 87%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --outline: 270 9% 57%;              /* #958ea0 */
 
-    --sidebar-primary: 240 5.9% 10%;
+    --radius: 1rem;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Brand gradients & shadows */
+    --gradient-brand: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-container)));
+    --gradient-text: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-mesh:
+      radial-gradient(at 0% 0%, hsl(224 38% 13%) 0%, transparent 50%),
+      radial-gradient(at 100% 0%, hsl(263 100% 25%) 0%, transparent 50%),
+      radial-gradient(at 50% 100%, hsl(190 100% 13%) 0%, transparent 50%);
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --shadow-clay: 0 40px 80px -20px hsl(0 0% 0% / 0.4), inset 0 1px 2px hsl(0 0% 100% / 0.05);
+    --shadow-glow-primary: 0 20px 40px hsl(263 100% 74% / 0.3);
+    --shadow-glow-primary-lg: 0 25px 50px hsl(263 100% 74% / 0.4);
+    --shadow-inner-top: inset 0 1px 2px hsl(224 22% 24% / 0.3);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (unused but kept for shadcn) */
+    --sidebar-background: 224 49% 10%;
+    --sidebar-foreground: 224 89% 92%;
+    --sidebar-primary: 263 100% 87%;
+    --sidebar-primary-foreground: 263 100% 28%;
+    --sidebar-accent: 224 33% 14%;
+    --sidebar-accent-foreground: 224 89% 92%;
+    --sidebar-border: 268 12% 31%;
+    --sidebar-ring: 263 100% 87%;
   }
 }
 
@@ -98,8 +88,50 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+@layer utilities {
+  .mesh-bg {
+    background-image: var(--gradient-mesh);
+  }
+  .text-gradient-brand {
+    background-image: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .clay-card {
+    box-shadow: var(--shadow-clay);
+  }
+  .inner-glow-top {
+    box-shadow: var(--shadow-inner-top);
+  }
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  .material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1;
   }
 }
