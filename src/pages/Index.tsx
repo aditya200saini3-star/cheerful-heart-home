@@ -177,7 +177,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="w-full rounded-t-xl mt-20 bg-surface-container-lowest shadow-[0_-10px_40px_hsl(0_0%_0%/0.4)]">
+      <footer className="relative z-10 w-full rounded-t-xl mt-20 glass">
         <div className="flex flex-col md:flex-row justify-between items-center px-8 md:px-12 py-12 md:py-16 gap-8 max-w-screen-2xl mx-auto">
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="text-lg font-black uppercase tracking-tighter">QuizMaster</div>
