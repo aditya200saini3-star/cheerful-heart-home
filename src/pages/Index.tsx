@@ -26,7 +26,7 @@ const Index = () => {
         </div>
       </nav>
 
-      <main className="mesh-bg pt-20">
+      <main className="relative z-10 pt-20">
         {/* Hero */}
         <section className="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden">
           <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" aria-hidden />
