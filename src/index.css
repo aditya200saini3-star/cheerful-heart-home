@@ -176,6 +176,24 @@
   .inner-glow-top {
     box-shadow: var(--shadow-inner-top);
   }
+  .glass {
+    background: hsl(var(--surface-container) / 0.25);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid hsl(0 0% 100% / 0.08);
+    box-shadow:
+      0 10px 40px -10px hsl(0 0% 0% / 0.4),
+      inset 0 1px 0 hsl(0 0% 100% / 0.06);
+  }
+  .glass-strong {
+    background: hsl(var(--surface-container-high) / 0.35);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border: 1px solid hsl(0 0% 100% / 0.1);
+    box-shadow:
+      0 20px 60px -15px hsl(0 0% 0% / 0.5),
+      inset 0 1px 0 hsl(0 0% 100% / 0.08);
+  }
   .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
