@@ -119,7 +119,7 @@ const Index = () => {
                 }}
                 aria-hidden
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/60 to-transparent" aria-hidden />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-background/10 to-transparent" aria-hidden />
               <div className="relative z-10 h-full p-8 md:p-12 flex flex-col justify-end">
                 <span className="text-secondary font-bold uppercase tracking-widest text-xs mb-4">Core Stats</span>
                 <h2 className="text-3xl md:text-5xl font-black mb-6 leading-none">1000+ Deep Knowledge Questions</h2>
