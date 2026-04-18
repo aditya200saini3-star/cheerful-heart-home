@@ -130,21 +130,21 @@ const Index = () => {
             </div>
 
             <div className="lg:col-span-5 flex flex-col gap-6">
-              <div className="flex-1 bg-surface-container-high p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8 group">
+              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8 group">
                 <div className="text-5xl md:text-6xl font-black text-primary group-hover:scale-110 transition-transform">19</div>
                 <div>
                   <h4 className="text-xl font-bold mb-1">Categories</h4>
                   <p className="text-muted-foreground text-sm">From Current Affairs, Science &amp; Technology, History, Geography and Music &amp; Entertainment.</p>
                 </div>
               </div>
-              <div className="flex-1 bg-surface-container-low p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8 group">
+              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8 group">
                 <div className="text-5xl md:text-6xl font-black text-secondary group-hover:scale-110 transition-transform">3</div>
                 <div>
                   <h4 className="text-xl font-bold mb-1">Difficulties</h4>
                   <p className="text-muted-foreground text-sm">Easy, Medium, and Hard tiers.</p>
                 </div>
               </div>
-              <div className="flex-1 bg-gradient-to-br from-primary/10 to-secondary/10 p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8 border border-white/5">
+              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
                 <span className="material-symbols-outlined text-primary text-4xl">emoji_events</span>
                 <div>
                   <h4 className="text-xl font-bold mb-1">Global Ranking</h4>
