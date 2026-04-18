@@ -1,8 +1,13 @@
+import AnimatedShaderBackground from "@/components/ui/animated-shader-background";
+
 const Index = () => {
   const year = new Date().getFullYear();
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground relative">
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <AnimatedShaderBackground className="w-full h-full" />
+      </div>
       {/* Top Nav */}
       <nav className="fixed top-0 w-full z-50 bg-surface-container-lowest/60 backdrop-blur-xl inner-glow-top shadow-2xl shadow-black/50">
         <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
