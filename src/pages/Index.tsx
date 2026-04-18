@@ -95,7 +95,7 @@ const Index = () => {
             ].map((step, i) => (
               <div
                 key={i}
-                className={`clay-card ${step.cardBg} p-10 rounded-md relative group transition-transform duration-500 hover:-translate-y-1 ${step.offset}`}
+                className={`glass p-10 rounded-md relative group transition-transform duration-500 hover:-translate-y-1 ${step.offset}`}
               >
                 <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
                   <span className={`material-symbols-outlined filled ${step.color} text-3xl`}>{step.icon}</span>
