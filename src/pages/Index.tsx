@@ -9,7 +9,7 @@ const Index = () => {
         <AnimatedShaderBackground className="w-full h-full" />
       </div>
       {/* Top Nav */}
-      <nav className="fixed top-0 w-full z-50 bg-surface-container-lowest/60 backdrop-blur-xl inner-glow-top shadow-2xl shadow-black/50">
+      <nav className="fixed top-0 w-full z-50 glass inner-glow-top">
         <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
           <div className="text-2xl font-bold tracking-tighter text-foreground">QuizMaster</div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
