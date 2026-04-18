@@ -103,8 +103,65 @@
 
 @layer utilities {
   .mesh-bg {
+    position: relative;
+    background-color: hsl(var(--background));
     background-image: var(--gradient-mesh);
+    background-size: 200% 200%;
+    animation: mesh-drift 18s ease-in-out infinite;
   }
+  .mesh-bg::before,
+  .mesh-bg::after {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: screen;
+    filter: blur(60px);
+    opacity: 0.55;
+  }
+  .mesh-bg::before {
+    background:
+      radial-gradient(40% 30% at 20% 30%, hsl(263 100% 60% / 0.55), transparent 60%),
+      radial-gradient(35% 28% at 80% 25%, hsl(188 92% 55% / 0.45), transparent 60%),
+      radial-gradient(45% 35% at 50% 80%, hsl(190 100% 30% / 0.55), transparent 60%);
+    animation: wave-a 14s ease-in-out infinite;
+  }
+  .mesh-bg::after {
+    background:
+      radial-gradient(35% 28% at 70% 60%, hsl(261 100% 70% / 0.5), transparent 60%),
+      radial-gradient(30% 25% at 25% 70%, hsl(188 97% 50% / 0.4), transparent 60%),
+      radial-gradient(40% 30% at 60% 15%, hsl(263 100% 50% / 0.45), transparent 60%);
+    animation: wave-b 22s ease-in-out infinite;
+  }
+  .mesh-bg > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes mesh-drift {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+  @keyframes wave-a {
+    0%   { transform: translate3d(0%, 0%, 0) scale(1); }
+    33%  { transform: translate3d(4%, -3%, 0) scale(1.08); }
+    66%  { transform: translate3d(-3%, 4%, 0) scale(0.96); }
+    100% { transform: translate3d(0%, 0%, 0) scale(1); }
+  }
+  @keyframes wave-b {
+    0%   { transform: translate3d(0%, 0%, 0) scale(1.05) rotate(0deg); }
+    33%  { transform: translate3d(-4%, 3%, 0) scale(0.95) rotate(2deg); }
+    66%  { transform: translate3d(3%, -4%, 0) scale(1.1) rotate(-2deg); }
+    100% { transform: translate3d(0%, 0%, 0) scale(1.05) rotate(0deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mesh-bg,
+    .mesh-bg::before,
+    .mesh-bg::after { animation: none; }
+  }
+
   .text-gradient-brand {
     background-image: var(--gradient-text);
     -webkit-background-clip: text;
