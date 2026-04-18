@@ -110,7 +110,7 @@ const Index = () => {
         {/* Features Bento */}
         <section id="features" className="py-24 md:py-32 px-6 md:px-8 max-w-screen-2xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
-            <div className="lg:col-span-7 bg-surface-container-lowest rounded-md overflow-hidden relative group border border-border/30 min-h-[380px]">
+            <div className="lg:col-span-7 glass rounded-md overflow-hidden relative group min-h-[380px]">
               <div
                 className="absolute inset-0 opacity-60 group-hover:scale-110 transition-transform duration-1000"
                 style={{
