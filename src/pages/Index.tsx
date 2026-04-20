@@ -136,7 +136,7 @@ const Index = () => {
 
             <div className="lg:col-span-5 flex flex-col gap-6">
               <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
-                <TiltCard className="text-5xl md:text-6xl font-black text-primary px-2" intensity={20}>
+                <TiltCard className="badge-3d badge-3d-primary rounded-2xl px-5 py-3 text-5xl md:text-6xl font-black text-primary" intensity={20}>
                   <span>19</span>
                 </TiltCard>
                 <div>
@@ -145,7 +145,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
-                <TiltCard className="text-5xl md:text-6xl font-black text-secondary px-2" intensity={20}>
+                <TiltCard className="badge-3d badge-3d-secondary rounded-2xl px-5 py-3 text-5xl md:text-6xl font-black text-secondary" intensity={20}>
                   <span>3</span>
                 </TiltCard>
                 <div>
@@ -154,8 +154,8 @@ const Index = () => {
                 </div>
               </div>
               <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
-                <TiltCard className="text-primary text-4xl px-2" intensity={20}>
-                  <span className="material-symbols-outlined text-5xl text-left rounded-none shadow-none">emoji_events</span>
+                <TiltCard className="badge-3d badge-3d-primary rounded-2xl px-5 py-3 text-primary" intensity={20}>
+                  <span className="material-symbols-outlined text-5xl rounded-none shadow-none">emoji_events</span>
                 </TiltCard>
                 <div>
                   <h4 className="text-xl font-bold mb-1">Global Ranking</h4>
