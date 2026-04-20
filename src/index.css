@@ -201,6 +201,30 @@
   .tilt-card:hover .tilt-card-glare {
     opacity: 1;
   }
+  .badge-3d {
+    background: linear-gradient(145deg, hsl(0 0% 100% / 0.18), hsl(0 0% 100% / 0.04));
+    border: 1px solid hsl(0 0% 100% / 0.18);
+    box-shadow:
+      0 12px 24px -8px hsl(0 0% 0% / 0.55),
+      0 4px 8px -2px hsl(0 0% 0% / 0.35),
+      inset 0 1px 0 hsl(0 0% 100% / 0.25),
+      inset 0 -2px 4px hsl(0 0% 0% / 0.25);
+    transition: box-shadow 0.4s ease;
+  }
+  .badge-3d-primary {
+    box-shadow:
+      0 16px 32px -8px hsl(263 100% 50% / 0.45),
+      0 4px 12px -2px hsl(0 0% 0% / 0.4),
+      inset 0 1px 0 hsl(0 0% 100% / 0.3),
+      inset 0 -2px 6px hsl(263 100% 30% / 0.4);
+  }
+  .badge-3d-secondary {
+    box-shadow:
+      0 16px 32px -8px hsl(188 92% 45% / 0.45),
+      0 4px 12px -2px hsl(0 0% 0% / 0.4),
+      inset 0 1px 0 hsl(0 0% 100% / 0.3),
+      inset 0 -2px 6px hsl(190 100% 20% / 0.5);
+  }
   .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
