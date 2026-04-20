@@ -94,16 +94,18 @@ const Index = () => {
                 offset: "md:mt-8",
               },
             ].map((step, i) => (
-              <TiltCard
+              <div
                 key={i}
-                className={`glass p-10 rounded-md group ${step.offset}`}
+                className={`glass p-10 rounded-md relative transition-transform duration-500 hover:-translate-y-1 ${step.offset}`}
               >
-                <div className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
-                  <span className={`material-symbols-outlined filled ${step.color} text-3xl`}>{step.icon}</span>
-                </div>
+                <TiltCard className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-8`} intensity={18}>
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className={`material-symbols-outlined filled ${step.color} text-3xl`}>{step.icon}</span>
+                  </div>
+                </TiltCard>
                 <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
-              </TiltCard>
+              </div>
             ))}
           </div>
         </section>
@@ -111,7 +113,7 @@ const Index = () => {
         {/* Features Bento */}
         <section id="features" className="py-24 md:py-32 px-6 md:px-8 max-w-screen-2xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
-            <TiltCard className="lg:col-span-7 glass rounded-md overflow-hidden group min-h-[380px]" intensity={6}>
+            <div className="lg:col-span-7 glass rounded-md overflow-hidden relative group min-h-[380px]">
               <div
                 className="absolute inset-0 opacity-60 group-hover:scale-110 transition-transform duration-1000"
                 style={{
@@ -128,43 +130,43 @@ const Index = () => {
                   Every question is hand-sculpted by subject matter experts to ensure accuracy and cognitive challenge.
                 </p>
               </div>
-            </TiltCard>
+            </div>
 
             <div className="lg:col-span-5 flex flex-col gap-6">
-              <TiltCard className="flex-1 glass p-6 md:p-8 rounded-md group" intensity={10}>
-                <div className="flex items-center gap-6 md:gap-8 h-full">
-                  <div className="text-5xl md:text-6xl font-black text-primary group-hover:scale-110 transition-transform">19</div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-1">Categories</h4>
-                    <p className="text-muted-foreground text-sm">From Current Affairs, Science &amp; Technology, History, Geography and Music &amp; Entertainment.</p>
-                  </div>
+              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
+                <TiltCard className="text-5xl md:text-6xl font-black text-primary px-2" intensity={20}>
+                  <span>19</span>
+                </TiltCard>
+                <div>
+                  <h4 className="text-xl font-bold mb-1">Categories</h4>
+                  <p className="text-muted-foreground text-sm">From Current Affairs, Science &amp; Technology, History, Geography and Music &amp; Entertainment.</p>
                 </div>
-              </TiltCard>
-              <TiltCard className="flex-1 glass p-6 md:p-8 rounded-md group" intensity={10}>
-                <div className="flex items-center gap-6 md:gap-8 h-full">
-                  <div className="text-5xl md:text-6xl font-black text-secondary group-hover:scale-110 transition-transform">3</div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-1">Difficulties</h4>
-                    <p className="text-muted-foreground text-sm">Easy, Medium, and Hard tiers.</p>
-                  </div>
+              </div>
+              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
+                <TiltCard className="text-5xl md:text-6xl font-black text-secondary px-2" intensity={20}>
+                  <span>3</span>
+                </TiltCard>
+                <div>
+                  <h4 className="text-xl font-bold mb-1">Difficulties</h4>
+                  <p className="text-muted-foreground text-sm">Easy, Medium, and Hard tiers.</p>
                 </div>
-              </TiltCard>
-              <TiltCard className="flex-1 glass p-6 md:p-8 rounded-md" intensity={10}>
-                <div className="flex items-center gap-6 md:gap-8 h-full">
-                  <span className="material-symbols-outlined text-primary text-4xl">emoji_events</span>
-                  <div>
-                    <h4 className="text-xl font-bold mb-1">Global Ranking</h4>
-                    <p className="text-muted-foreground text-sm">Compete with the sharpest minds globally.</p>
-                  </div>
+              </div>
+              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
+                <TiltCard className="text-primary text-4xl px-2" intensity={20}>
+                  <span className="material-symbols-outlined">emoji_events</span>
+                </TiltCard>
+                <div>
+                  <h4 className="text-xl font-bold mb-1">Global Ranking</h4>
+                  <p className="text-muted-foreground text-sm">Compete with the sharpest minds globally.</p>
                 </div>
-              </TiltCard>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA */}
         <section className="py-24 md:py-32 px-6 md:px-8 text-center max-w-4xl mx-auto">
-          <TiltCard className="glass-strong rounded-md p-10 md:p-16 overflow-hidden" intensity={5}>
+          <div className="glass-strong rounded-md p-10 md:p-16 relative overflow-hidden">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px]" aria-hidden />
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]" aria-hidden />
             <div className="relative z-10">
@@ -179,7 +181,7 @@ const Index = () => {
                 Start Now — It's Free
               </a>
             </div>
-          </TiltCard>
+          </div>
         </section>
       </main>
 
