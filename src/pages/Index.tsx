@@ -153,7 +153,7 @@ const Index = () => {
               </div>
               <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
                 <TiltCard className="text-primary text-4xl px-2" intensity={20}>
-                  <span className="material-symbols-outlined">emoji_events</span>
+                  <span className="material-symbols-outlined text-5xl text-left rounded-none shadow-none">emoji_events</span>
                 </TiltCard>
                 <div>
                   <h4 className="text-xl font-bold mb-1">Global Ranking</h4>
