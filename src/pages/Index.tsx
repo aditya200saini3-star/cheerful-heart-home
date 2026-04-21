@@ -115,7 +115,7 @@ const Index = () => {
         {/* Features Bento */}
         <section id="features" className="py-24 md:py-32 px-6 md:px-8 max-w-screen-2xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
-            <div className="lg:col-span-7 glass rounded-md overflow-hidden relative group min-h-[380px]">
+            <div className="lg:col-span-7 glass card-hover-lift rounded-md overflow-hidden relative group min-h-[380px]">
               <div
                 className="absolute inset-0 opacity-60 group-hover:scale-110 transition-transform duration-1000"
                 style={{
@@ -168,7 +168,7 @@ const Index = () => {
 
         {/* CTA */}
         <section className="py-24 md:py-32 px-6 md:px-8 text-center max-w-4xl mx-auto">
-          <div className="glass-strong rounded-md p-10 md:p-16 relative overflow-hidden">
+          <div className="glass-strong card-hover-lift rounded-md p-10 md:p-16 relative overflow-hidden">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px]" aria-hidden />
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]" aria-hidden />
             <div className="relative z-10">
