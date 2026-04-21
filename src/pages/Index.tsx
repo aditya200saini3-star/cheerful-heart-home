@@ -103,7 +103,7 @@ const Index = () => {
                   intensity={20}
                   glareOpacity={0.2}
                 >
-                  <span className={`material-symbols-outlined filled ${step.color} text-3xl`}>{step.icon}</span>
+                  <span className={`material-symbols-outlined filled ${step.color} text-3xl mx-[10px] my-[8px] py-[5px] px-[6px]`}>{step.icon}</span>
                 </TiltCard>
                 <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
