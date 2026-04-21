@@ -94,20 +94,20 @@ const Index = () => {
                 offset: "md:mt-8",
               },
             ].map((step, i) => (
-              <TiltCard
+              <div
                 key={i}
-                className={`glass p-10 rounded-md relative ${step.offset}`}
-                intensity={8}
-                glareOpacity={0.12}
+                className={`glass card-hover-lift p-10 rounded-md relative ${step.offset}`}
               >
-                <div
+                <TiltCard
                   className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-8 badge-3d`}
+                  intensity={20}
+                  glareOpacity={0.2}
                 >
                   <span className={`material-symbols-outlined filled ${step.color} text-3xl`}>{step.icon}</span>
-                </div>
+                </TiltCard>
                 <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
-              </TiltCard>
+              </div>
             ))}
           </div>
         </section>
@@ -135,7 +135,7 @@ const Index = () => {
             </div>
 
             <div className="lg:col-span-5 flex flex-col gap-6">
-              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
+              <div className="flex-1 glass card-hover-lift p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
                 <TiltCard className="badge-3d badge-3d-primary rounded-2xl px-5 py-3 text-5xl md:text-6xl font-black text-primary" intensity={20}>
                   <span>19</span>
                 </TiltCard>
@@ -144,7 +144,7 @@ const Index = () => {
                   <p className="text-muted-foreground text-sm">From Current Affairs, Science &amp; Technology, History, Geography and Music &amp; Entertainment.</p>
                 </div>
               </div>
-              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
+              <div className="flex-1 glass card-hover-lift p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
                 <TiltCard className="badge-3d badge-3d-secondary rounded-2xl px-5 py-3 text-5xl md:text-6xl font-black text-secondary" intensity={20}>
                   <span>3</span>
                 </TiltCard>
@@ -153,7 +153,7 @@ const Index = () => {
                   <p className="text-muted-foreground text-sm">Easy, Medium, and Hard tiers.</p>
                 </div>
               </div>
-              <div className="flex-1 glass p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
+              <div className="flex-1 glass card-hover-lift p-6 md:p-8 rounded-md flex items-center gap-6 md:gap-8">
                 <TiltCard className="badge-3d badge-3d-primary rounded-2xl px-5 py-3 text-primary" intensity={20}>
                   <span className="material-symbols-outlined text-5xl rounded-none shadow-none">emoji_events</span>
                 </TiltCard>
