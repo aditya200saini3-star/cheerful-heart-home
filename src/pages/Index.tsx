@@ -125,6 +125,13 @@ const Index = () => {
                 aria-hidden
               />
               <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-background/10 to-transparent" aria-hidden />
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbigTTrUaM02IvsivN_CxPyQBqowHWBR9PUA_yJ-2tcUsaejVE25efkwBamne4VLzuFVUuudYLKZ2Aq9vKlx8V3sjr6TC5srRlrsZofKvmTRGO0J4mPxChDsf4j7zF29C0EAp43RcCmSzx7tVzj1zOK_AewxZDl22MYxtj1dEcYD9ouNvc1RM1rpuNNsvWLR-c-t4UIRuJ6o7a3hMxUyESTgsa77vxFD2KWYWnFFRQQIBcHdxrS87I00arxz5j77YRkONBXwH0uBI"
+                alt=""
+                aria-hidden
+                className="absolute right-0 top-0 h-full w-2/3 object-contain object-right pointer-events-none transition-transform duration-700 ease-out group-hover:[transform:translateZ(60px)_scale(1.08)]"
+                style={{ transformStyle: "preserve-3d" }}
+              />
               <div className="relative z-10 h-full p-8 md:p-12 flex flex-col justify-end">
                 <span className="text-secondary font-bold uppercase tracking-widest text-xs mb-4">Core Stats</span>
                 <h2 className="text-3xl md:text-5xl font-black mb-6 leading-none">1000+ Deep Knowledge Questions</h2>
