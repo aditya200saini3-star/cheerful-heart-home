@@ -94,20 +94,20 @@ const Index = () => {
                 offset: "md:mt-8",
               },
             ].map((step, i) => (
-              <TiltCard
+              <div
                 key={i}
-                className={`glass p-10 rounded-md relative ${step.offset}`}
-                intensity={8}
-                glareOpacity={0.12}
+                className={`glass card-hover-lift p-10 rounded-md relative ${step.offset}`}
               >
-                <div
+                <TiltCard
                   className={`w-16 h-16 rounded-2xl ${step.bg} flex items-center justify-center mb-8 badge-3d`}
+                  intensity={20}
+                  glareOpacity={0.2}
                 >
                   <span className={`material-symbols-outlined filled ${step.color} text-3xl`}>{step.icon}</span>
-                </div>
+                </TiltCard>
                 <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
-              </TiltCard>
+              </div>
             ))}
           </div>
         </section>
