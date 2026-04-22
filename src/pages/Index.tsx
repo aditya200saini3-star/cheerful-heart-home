@@ -1,31 +1,16 @@
 import AnimatedShaderBackground from "@/components/ui/animated-shader-background";
 import { TiltCard } from "@/components/ui/tilt-card";
+import { Link } from "react-router-dom";
+import QuizNav from "@/components/QuizNav";
+import QuizFooter from "@/components/QuizFooter";
 
 const Index = () => {
-  const year = new Date().getFullYear();
-
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <div className="fixed inset-0 z-0 pointer-events-none">
         <AnimatedShaderBackground className="w-full h-full" />
       </div>
-      {/* Top Nav */}
-      <nav className="fixed top-0 w-full z-50 glass inner-glow-top">
-        <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
-          <div className="text-2xl font-bold tracking-tighter text-foreground">QuizMaster</div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
-            <a className="text-foreground hover:text-white transition-all duration-300 hover:scale-105" href="#">Home</a>
-            <a className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105" href="#how-it-works">How It Works</a>
-            <a className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105" href="#features">Features</a>
-          </div>
-          <a
-            href="#features"
-            className="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-5 md:px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-primary/20"
-          >
-            Play Now
-          </a>
-        </div>
-      </nav>
+      <QuizNav />
 
       <main className="relative z-10 pt-20">
         {/* Hero */}
@@ -43,14 +28,14 @@ const Index = () => {
               Sculpt your knowledge through an immersive quiz experience designed for high-end intellectual rigor and tactile engagement.
             </p>
             <div className="flex items-center justify-center">
-              <a
-                href="#features"
+              <Link
+                to="/difficulty"
                 className="group relative px-10 py-5 bg-gradient-to-br from-primary to-primary-container text-primary-foreground font-bold text-lg rounded-full transition-all duration-500 hover:-translate-y-1"
                 style={{ boxShadow: "var(--shadow-glow-primary)" }}
               >
                 <div className="absolute inset-0 rounded-full bg-white/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                 <span className="relative">Start Quiz</span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -183,32 +168,18 @@ const Index = () => {
               <p className="text-muted-foreground text-lg md:text-xl mb-10 md:mb-12">
                 Join the collective of elite thinkers and start your first session today.
               </p>
-              <a
-                href="#features"
+              <Link
+                to="/difficulty"
                 className="inline-block bg-primary text-primary-foreground font-black px-10 md:px-12 py-4 md:py-5 rounded-full text-lg hover:bg-primary-container transition-all shadow-xl shadow-primary/25 hover:-translate-y-1 duration-300"
               >
                 Start Now — It's Free
-              </a>
+              </Link>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="relative z-10 w-full rounded-t-xl mt-20 glass">
-        <div className="flex flex-col md:flex-row justify-between items-center px-8 md:px-12 py-12 md:py-16 gap-8 max-w-screen-2xl mx-auto">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="text-lg font-black uppercase tracking-tighter">QuizMaster</div>
-            <p className="text-xs uppercase tracking-widest text-muted-foreground">
-              © {year} QuizMaster. Sculpting knowledge through light.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-xs uppercase tracking-widest">
-            <a className="text-muted-foreground hover:text-primary transition-colors" href="#">Privacy Policy</a>
-            <a className="text-muted-foreground hover:text-primary transition-colors" href="#">Contact Us</a>
-          </div>
-        </div>
-      </footer>
+      <QuizFooter />
     </div>
   );
 };
