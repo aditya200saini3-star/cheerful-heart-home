@@ -9559,6 +9559,6 @@ export const QUIZZES: Record<string, Question[]> = {
 };
 
 export function getQuiz(category: string, difficulty: Difficulty): Question[] {
-  const prefix = difficulty === "easy" ? "" : difficulty;
-  return QUIZZES[`${prefix}_${category}`] || [];
+  // use difficulty as-is
+  return QUIZZES[`${difficulty}_${category}`] || [];
 }
